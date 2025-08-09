@@ -5,82 +5,572 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>السيرة الذاتية | عبدالعزيز العنزي</title>
     
-    <meta name="description" content="موقع السيرة الذاتية لعبدالعزيز العنزي، مطور تطبيقات Flutter.">
-    <link rel="icon" type="image/png" href="https://placehold.co/32x32/1D4ED8/FFFFFF?text=A">
+    <meta name="description" content="موقع السيرة الذاتية لعبدالعزيز العنزي، خريج علوم حاسب متخصص في الدعم الفني وتطوير التطبيقات.">
+    <link rel="icon" type="image/png" href="https://placehold.co/32x32/3B82F6/FFFFFF?text=A">
     
     <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-    <script src="https://cdn.tailwindcss.com"></script>
+    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" />
-    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap" rel="stylesheet">
     
     <style>
         :root {
             --primary: #3b82f6;
             --accent: #f97316;
-            --bg-light: #f9fafb;
-            --card-light: #ffffff;
-            --text-light: #111827;
-            --text-muted-light: #6b7280;
-            
-            --bg-dark: #111827;
-            --card-dark: #1f2937;
-            --text-dark: #f3f4f6;
-            --text-muted-dark: #9ca3af;
+            --bg: #f0f4f8;
+            --txt: #111827;
+            --card-bg: #ffffff;
+            --txt-muted: #6b7280;
+            --transition-speed: 0.3s;
+            --card-radius: 20px;
+            --card-pad: 1.75rem;
+            --line-h: 1.7;
         }
-        html { scroll-behavior: smooth; }
+
+        body.dark {
+            --primary: #3b82f6;
+            --accent: #f59e0b;
+            --bg: #0f172a;
+            --txt: #e2e8f0;
+            --card-bg: #1e293b;
+            --txt-muted: #94a3b8;
+        }
+
         body {
             font-family: 'Tajawal', sans-serif;
-            background-color: var(--bg-light);
-            color: var(--text-light);
-            transition: background-color 0.3s, color 0.3s;
+            margin: 0;
+            padding-top: 60px;
+            background: var(--bg);
+            color: var(--txt);
+            line-height: var(--line-h);
+            min-height: 100vh;
+            transition: background-color var(--transition-speed), color var(--transition-speed);
         }
-        body.dark {
-            background-color: var(--bg-dark);
-            color: var(--text-dark);
+        a {
+            color: var(--primary);
+            text-decoration: none;
+        }
+        a:hover, a:focus {
+            color: var(--accent);
+            outline: none;
+        }
+
+        nav {
+            position: fixed;
+            top: 0;
+            right: 0;
+            left: 0;
+            background: var(--card-bg);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 20px;
+            height: 60px;
+            z-index: 1000;
+            transition: background-color var(--transition-speed);
+        }
+        nav .logo {
+            font-weight: 700;
+            font-size: 1.5rem;
+            color: var(--primary);
+            user-select: none;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+            margin: 0;
+            padding: 0;
+        }
+        nav ul li {
+            cursor: pointer;
+            font-weight: 500;
+            font-size: 1rem;
+            padding: 8px 12px;
+            border-radius: 8px;
+            transition: background-color var(--transition-speed), color var(--transition-speed);
+            user-select: none;
+        }
+        nav ul li:hover, nav ul li:focus {
+            background-color: var(--primary);
+            color: white;
+            outline: none;
+        }
+
+        .nav-controls {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        #languageSwitcher, #darkModeSwitcher {
+            background: none;
+            border: 1.5px solid var(--primary);
+            color: var(--primary);
+            border-radius: 30px;
+            width: 40px;
+            height: 40px;
+            font-weight: 700;
+            cursor: pointer;
+            user-select: none;
+            transition: background-color var(--transition-speed), color var(--transition-speed);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1rem;
+        }
+        #languageSwitcher:hover, #languageSwitcher:focus, #darkModeSwitcher:hover, #darkModeSwitcher:focus {
+            background-color: var(--primary);
+            color: white;
+            outline: none;
+        }
+        #hamburger {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.8rem;
+            cursor: pointer;
+            color: var(--txt);
+            user-select: none;
+            padding: 4px;
+            transition: color var(--transition-speed);
+        }
+
+        main {
+            margin: 20px auto 40px;
+            max-width: 1100px;
+            padding: 0 1rem;
+        }
+
+        section {
+            padding: var(--card-pad);
+            margin-bottom: 2.5rem;
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        section:not(.hero-section) {
+            background: var(--card-bg);
+            border-radius: var(--card-radius);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
+        }
+
+        section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .hero-section {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 2rem;
+            min-height: 70vh;
+            padding-top: 2rem;
+            padding-bottom: 2rem;
+        }
+        .hero-content {
+            flex-basis: 55%;
+        }
+        .hero-title {
+            font-size: 3.5rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+            line-height: 1.2;
+        }
+        .hero-subtitle {
+            font-size: 1.5rem;
+            font-weight: 400;
+            color: var(--txt);
+            margin-bottom: 1.5rem;
+        }
+        .hero-description {
+            font-size: 1.1rem;
+            color: var(--txt-muted);
+            margin-bottom: 2rem;
+            max-width: 500px;
+        }
+        .hero-image-container {
+            flex-basis: 40%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .hero-image {
+            width: 350px;
+            height: 350px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 7px solid var(--card-bg);
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+        }
+
+        .hero-socials {
+            display: flex;
+            gap: 1.5rem;
+            margin-top: 2rem;
+            margin-bottom: 2rem;
+        }
+        .hero-socials a {
+            font-size: 2rem;
+            color: var(--txt-muted);
+            transition: color 0.3s, transform 0.3s;
+        }
+        .hero-socials a:hover {
+            color: var(--primary);
+            transform: scale(1.1);
+        }
+
+        h2 {
+            color: var(--primary);
+            font-weight: 700;
+            font-size: 1.8rem;
+            border-bottom: 3px solid var(--primary);
+            padding-bottom: 0.5rem;
+            margin-top: 0;
+            margin-bottom: 2.5rem;
+        }
+        h3 {
+            font-size: 1.25rem;
+            margin-bottom: 1.5rem;
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        p, li {
+            font-weight: 400;
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+        #experience-container ul {
+            list-style-type: none;
+            padding-inline-start: 1rem;
+        }
+        #experience-container ul li {
+            position: relative;
+            padding-inline-start: 1.5rem;
+            margin-bottom: 0.75rem;
+        }
+        #experience-container ul li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--primary);
+            font-weight: bold;
+        }
+        [dir="rtl"] #experience-container ul li::before {
+            right: 0;
+            left: auto;
+        }
+
+        .skills-container {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2.5rem;
+        }
+        .skills-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        .skill-item {
+            background-color: var(--bg);
+            padding: 0.5rem 1rem;
+            border-radius: 12px;
+            font-weight: 500;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            transition: transform 0.2s ease, background-color 0.2s, color 0.2s;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .skill-item:hover {
+            transform: translateY(-3px);
+            background-color: var(--primary);
+            color: white;
+        }
+        .skill-item img {
+            height: 24px;
+            width: 24px;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.8rem;
+        }
+        .project-card {
+            background: var(--card-bg);
+            border-radius: var(--card-radius);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
+            padding: 1.5rem;
+            transition: box-shadow 0.3s ease, transform 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+        }
+        .project-card:hover {
+            box-shadow: 0 12px 35px rgba(0, 0, 0, 0.1);
+            transform: translateY(-8px);
+        }
+        .project-logo-container {
+            height: 100px;
+            margin: 0 auto 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .project-logo {
+            width: 100px;
+            height: 100px;
+            object-fit: contain;
+        }
+        .cert-logo-container {
+            height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+        }
+        .cert-logo {
+            max-height: 60%;
+            max-width: 70%;
+            object-fit: contain;
+        }
+        .project-title {
+            font-weight: 700;
+            color: var(--primary);
+            font-size: 1.25rem;
+            margin-bottom: 0.75rem;
+        }
+        .project-description {
+            font-size: 1rem;
+            color: var(--txt-muted);
+            margin-bottom: 1.5rem;
+            flex-grow: 1;
+        }
+        .download-btn {
+            display: inline-block;
+            padding: 0.8rem 1.6rem;
+            background: var(--primary);
+            color: #fff;
+            border: none;
+            border-radius: 30px;
+            font-weight: 700;
+            font-size: 1rem;
+            box-shadow: 0 4px 12px rgba(59, 130, 246, 0.2);
+            user-select: none;
+            transition: all var(--transition-speed) ease;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        .download-btn.hero-btn {
+            padding: 1rem 2rem;
+            font-size: 1.1rem;
+        }
+
+        body.dark .download-btn {
+            box-shadow: 0 4px 12px rgba(59, 130, 246, 0.2);
+        }
+        .download-btn:hover,
+        .download-btn:focus {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 16px rgba(59, 130, 246, 0.3);
+            background: var(--accent);
+            color: #fff;
+            outline: none;
+        }
+        
+        .download-section {
+            text-align: center;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem 1rem;
+            margin-top: 2rem;
+            background: var(--card-bg);
+            color: var(--txt-muted);
+        }
+        
+        #toast-notification {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #28a745;
+            color: white;
+            padding: 12px 25px;
+            border-radius: 8px;
+            z-index: 1001;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.4s, visibility 0.4s, transform 0.4s;
+            font-weight: 500;
+        }
+
+        #toast-notification.show {
+            opacity: 1;
+            visibility: visible;
+            transform: translateX(-50%) translateY(-20px);
+        }
+
+        @media (max-width: 992px) {
+            .hero-section {
+                flex-direction: column-reverse;
+                text-align: center;
+                min-height: auto;
+            }
+            .hero-content {
+                flex-basis: 100%;
+            }
+            .hero-description {
+                margin-left: auto;
+                margin-right: auto;
+            }
+            .hero-image-container {
+                margin-bottom: 2rem;
+            }
+            .hero-image {
+                width: 250px;
+                height: 250px;
+            }
+            .hero-socials {
+                justify-content: center;
+            }
+        }
+
+        @media (max-width: 768px) {
+            nav ul {
+                position: fixed;
+                top: 60px;
+                right: 0;
+                width: 250px;
+                height: calc(100vh - 60px);
+                background: var(--card-bg);
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 1rem;
+                padding: 1.5rem;
+                transform: translateX(100%);
+                transition: transform 0.3s ease-in-out;
+                box-shadow: -4px 0 8px rgba(0,0,0,0.1);
+                z-index: 999;
+            }
+            [dir="rtl"] nav ul {
+                transform: translateX(-100%);
+                left: 0;
+                right: auto;
+            }
+            nav ul.open {
+                transform: translateX(0);
+            }
+            nav ul li {
+                width: 100%;
+            }
+            #hamburger {
+                display: block;
+                order: 3;
+            }
+            .nav-controls {
+                gap: 10px;
+            }
+            main {
+                padding: 0 1rem;
+            }
+            .hero-title {
+                font-size: 2.5rem;
+            }
+            .hero-subtitle {
+                font-size: 1.2rem;
+            }
         }
     </style>
 </head>
-<body class="antialiased">
+<body class="dark">
 
-    <!-- Header -->
-    <header class="bg-white dark:bg-gray-800 shadow-sm sticky top-0 z-50 transition-colors">
-        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <div id="nav-logo" class="font-bold text-xl text-blue-600"></div>
-            <div class="flex items-center space-x-2 rtl:space-x-reverse">
-                <button id="languageSwitcher" class="text-gray-600 dark:text-gray-300 font-semibold px-3 py-1 rounded-md hover:bg-gray-100 dark:hover:bg-gray-700">EN</button>
-                <button id="darkModeSwitcher" class="text-gray-600 dark:text-gray-300 text-lg px-3 py-1 rounded-md hover:bg-gray-100 dark:hover:bg-gray-700">
-                    <i class="fas fa-moon"></i>
-                </button>
+    <nav>
+        <div class="logo" data-i18n="navName"></div>
+        <ul id="navMenu" aria-label="قائمة التنقل">
+            <li data-scroll="hero" tabindex="0" role="link" data-i18n="navHome"></li>
+            <li data-scroll="experience" tabindex="0" role="link" data-i18n="experience"></li>
+            <li data-scroll="skills" tabindex="0" role="link" data-i18n="skills"></li>
+            <li data-scroll="projects" tabindex="0" role="link" data-i18n="navProjects"></li>
+            <li data-scroll="certificates" tabindex="0" role="link" data-i18n="certificatesTitle"></li>
+            <li data-scroll="download" tabindex="0" role="link" data-i18n="download"></li>
+        </ul>
+        <div class="nav-controls">
+            <button id="languageSwitcher" aria-pressed="true" aria-label="تبديل اللغة" tabindex="0">AR</button>
+            <button id="darkModeSwitcher" aria-label="تبديل الوضع الليلي" tabindex="0">
+                <i class="fas fa-moon"></i>
+            </button>
+            <button id="hamburger" aria-label="فتح القائمة" aria-expanded="false" aria-controls="navMenu">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <main>
+        <section id="hero" class="hero-section">
+            <div class="hero-content">
+                <h1 class="hero-title" data-i18n="heroTitle"></h1>
+                <p class="hero-subtitle" data-i18n="heroSubtitle"></p>
+                <p class="hero-description" data-i18n="aboutText"></p>
+                
+                <div id="hero-socials" class="hero-socials"></div>
+
+                <a href="mailto:aziiz.alanzy@gmail.com" class="download-btn hero-btn" data-i18n="heroContactBtn"></a>
             </div>
-        </nav>
-    </header>
-
-    <main class="container mx-auto px-6 py-10">
-
-        <!-- Hero Section -->
-        <section id="hero" class="text-center py-16">
-            <img id="hero-image" src="https://placehold.co/128x128/1f2937/f3f4f6?text=A" alt="صورة شخصية" class="w-32 h-32 rounded-full object-cover border-4 border-white dark:border-gray-800 shadow-lg mx-auto mb-6">
-            <h1 id="hero-title" class="text-4xl font-bold text-gray-800 dark:text-white"></h1>
-            <p id="hero-subtitle" class="mt-2 text-xl text-blue-600 dark:text-blue-400"></p>
-            <p id="about-text" class="mt-6 max-w-2xl mx-auto text-gray-600 dark:text-gray-400 text-lg"></p>
-            <div id="social-links" class="mt-8 flex justify-center space-x-6 rtl:space-x-reverse">
-                <!-- Social links will be generated here -->
+            <div class="hero-image-container">
+                <img id="hero-image" src="mysl.webp" alt="صورة عبدالعزيز العنزي" class="hero-image" onerror="this.onerror=null;this.src='https://placehold.co/350x350/1e293b/e2e8f0?text=A';">
             </div>
         </section>
 
-        <!-- Dynamic Sections Container -->
-        <div id="sections-container" class="space-y-12">
-            <!-- Sections like Experience, Skills, Projects will be generated here -->
-        </div>
+        <section id="experience">
+            <h2 data-i18n="experience"></h2>
+            <div id="experience-container"></div>
+        </section>
 
+        <section id="education">
+            <h2 data-i18n="education"></h2>
+            <p data-i18n="edu1"></p>
+        </section>
+
+        <section id="skills">
+            <h2 data-i18n="skills"></h2>
+            <div id="skills-container" class="skills-container"></div>
+        </section>
+
+        <section id="projects">
+            <h2 data-i18n="navProjects"></h2>
+            <div id="projects-container" class="projects-grid" role="list"></div>
+        </section>
+
+        <section id="certificates">
+            <h2><i class="fas fa-certificate"></i> <span data-i18n="certificatesTitle"></span></h2>
+            <div id="certificates-container" class="projects-grid" role="list"></div>
+        </section>
+
+        <section id="download" class="download-section">
+            <h2 data-i18n="download"></h2>
+            <a href="Abdulaziz_cv9.pdf" class="download-btn" download>
+                <i class="fas fa-file-pdf"></i> <span data-i18n="downloadBtn"></span>
+            </a>
+        </section>
     </main>
 
-    <footer class="text-center py-8 mt-10">
-        <p id="footer-text" class="text-gray-500 dark:text-gray-400 text-sm"></p>
+    <footer>
+        <p data-i18n="footerText"></p>
     </footer>
+
+    <div id="toast-notification"></div>
 
     <script>
     document.addEventListener('DOMContentLoaded', async () => {
+        
         let translations;
         let currentLang = localStorage.getItem('lang') || 'ar';
 
@@ -97,8 +587,11 @@
         }
 
         let isDarkMode = localStorage.getItem('darkMode') === 'true';
-        const darkModeSwitcher = document.getElementById('darkModeSwitcher');
+
         const langSwitcher = document.getElementById('languageSwitcher');
+        const darkModeSwitcher = document.getElementById('darkModeSwitcher');
+        const navMenu = document.getElementById('navMenu');
+        const hamburger = document.getElementById('hamburger');
         const body = document.body;
 
         const iconMap = {
@@ -115,66 +608,78 @@
             document.documentElement.dir = currentLang === 'ar' ? 'rtl' : 'ltr';
             langSwitcher.textContent = currentLang === 'ar' ? 'EN' : 'AR';
             
-            document.title = content.pageTitle || 'السيرة الذاتية';
-            document.getElementById('nav-logo').textContent = content.navName || '';
-            document.getElementById('hero-title').textContent = content.heroTitle || '';
-            document.getElementById('hero-subtitle').textContent = content.heroSubtitle || '';
-            document.getElementById('about-text').textContent = content.aboutText || '';
-            document.getElementById('hero-image').src = content.heroImage || '';
-            document.getElementById('footer-text').innerHTML = content.footerText || '';
+            document.querySelectorAll('[data-i18n]').forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                if (content && content[key]) {
+                    el.innerHTML = content[key];
+                }
+            });
 
-            const socialContainer = document.getElementById('social-links');
+            document.getElementById('hero-image').src = content.heroImage || 'mysl.webp';
+
+            const socialContainer = document.getElementById('hero-socials');
             if (socialContainer && content.social_links) {
                 socialContainer.innerHTML = content.social_links.map(link => {
-                    if (!link.value) return ''; // Skip if value is empty
+                    if (!link.value) return ''; 
                     const iconClass = iconMap[link.type] || 'fas fa-link';
                     let href = link.value;
                     if(link.type === 'email') href = `mailto:${link.value}`;
                     if(link.type === 'phone') href = `tel:${link.value}`;
-                    return `<a href="${href}" target="_blank" rel="noopener noreferrer" class="text-2xl text-gray-500 hover:text-blue-600 dark:text-gray-400 dark:hover:text-blue-400"><i class="${iconClass}"></i></a>`;
+                    return `<a href="${href}" target="_blank" rel="noopener noreferrer" aria-label="${link.type}"><i class="${iconClass}"></i></a>`;
                 }).join('');
             }
 
-            const sectionsContainer = document.getElementById('sections-container');
-            if (sectionsContainer && content.sections) {
-                sectionsContainer.innerHTML = content.sections.map(section => {
-                    let contentHtml = '';
-                    if (section.type === 'experience' && section.items) {
-                        contentHtml = section.items.map(item => `
-                            <div class="mb-8">
-                                <h3 class="text-xl font-bold text-gray-800 dark:text-white">${item.title}</h3>
-                                <p class="text-sm text-gray-500 dark:text-gray-400 mb-2">${item.location}</p>
-                                <ul class="list-disc list-inside text-gray-600 dark:text-gray-400 space-y-1 rtl:list-outside rtl:pr-4">
-                                    ${item.description.map(d => `<li>${d}</li>`).join('')}
-                                </ul>
-                            </div>
-                        `).join('');
-                    } else if (section.type === 'skills' && section.items) {
-                        contentHtml = section.items.map(item => `
-                            <div class="bg-white dark:bg-gray-800 p-4 rounded-lg shadow-sm text-center">
-                                ${item.icon_url ? `<img src="${item.icon_url}" alt="${item.name}" class="h-8 mx-auto mb-2">` : ''}
-                                <h4 class="font-semibold text-gray-700 dark:text-gray-200">${item.name}</h4>
-                            </div>
-                        `).join('');
-                        contentHtml = `<div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">${contentHtml}</div>`;
-                    } else if (section.type === 'projects' && section.items) {
-                         contentHtml = section.items.map(item => `
-                            <a href="${item.link}" class="block bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md hover:shadow-xl hover:-translate-y-1 transition-all">
-                                <img src="${item.icon}" alt="${item.title}" class="h-16 mx-auto mb-4 rounded-lg">
-                                <h3 class="text-xl font-bold text-gray-800 dark:text-white">${item.title}</h3>
-                                <p class="text-gray-600 dark:text-gray-400 mt-2">${item.description}</p>
-                            </a>
-                        `).join('');
-                         contentHtml = `<div class="grid grid-cols-1 md:grid-cols-2 gap-8">${contentHtml}</div>`;
-                    }
+            const experienceContainer = document.getElementById('experience-container');
+            if (experienceContainer && content.experiences) {
+                experienceContainer.innerHTML = content.experiences.map(exp => `
+                    <div style="margin-bottom: 2rem;">
+                        <h3 style="color: var(--txt); border: none; font-size: 1.4rem;">${exp.title}</h3>
+                        <p style="color: var(--txt-muted); margin-bottom: 1rem;">${exp.location}</p>
+                        <ul>${exp.description.map(d => `<li>${d}</li>`).join('')}</ul>
+                    </div>
+                `).join('');
+            }
 
-                    return `
-                        <section id="${section.id}" class="bg-white dark:bg-gray-800 p-8 rounded-lg shadow-md">
-                            <h2 class="text-3xl font-bold text-center mb-8 text-gray-800 dark:text-white">${section.title}</h2>
-                            <div>${contentHtml}</div>
-                        </section>
-                    `;
-                }).join('');
+            const skillsContainer = document.getElementById('skills-container');
+            if (skillsContainer && content.skill_categories) {
+                skillsContainer.innerHTML = content.skill_categories.map(cat => `
+                    <div class="skills-category">
+                        <h3><i class="${cat.icon}"></i> ${cat.category_title}</h3>
+                        <div class="skills-grid">
+                            ${cat.skills.map(skill => `
+                                <div class="skill-item">
+                                    ${skill.icon_url ? `<img src="${skill.icon_url}" alt="${skill.name}"/>` : ''}
+                                    <span>${skill.name}</span>
+                                </div>
+                            `).join('')}
+                        </div>
+                    </div>
+                `).join('');
+            }
+
+            const projectsContainer = document.getElementById('projects-container');
+            if (projectsContainer && content.projects) {
+                projectsContainer.innerHTML = content.projects.map(proj => `
+                    <article class="project-card" role="listitem">
+                        <div class="project-logo-container">
+                            <img src="${proj.icon}" alt="${proj.title}" class="project-logo">
+                        </div>
+                        <div class="project-title">${proj.title}</div>
+                        <p class="project-description">${proj.description}</p>
+                        <a href="${proj.link}" class="download-btn">${content.viewProjectBtn}</a>
+                    </article>
+                `).join('');
+            }
+
+            const certificatesContainer = document.getElementById('certificates-container');
+            if (certificatesContainer && content.certificates) {
+                 certificatesContainer.innerHTML = content.certificates.map(cert => `
+                    <article class="project-card" role="listitem">
+                        <div class="cert-logo-container"><img loading="lazy" src="${cert.logo}" alt="${cert.title} Logo" class="cert-logo" /></div>
+                        <div class="project-title">${cert.title}</div>
+                        <a href="${cert.link}" target="_blank" rel="noopener noreferrer" class="download-btn">${content.viewCertBtn}</a>
+                    </article>
+                `).join('');
             }
         }
 
@@ -203,10 +708,15 @@
             applyDarkMode();
         });
 
+        const hamburger = document.getElementById('hamburger');
+        const navMenu = document.getElementById('navMenu');
+        hamburger.addEventListener('click', () => {
+            navMenu.classList.toggle('hidden');
+        });
+
         loadContent();
         applyDarkMode();
     });
     </script>
-
 </body>
 </html>

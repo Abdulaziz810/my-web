@@ -2,7 +2,7 @@ backend:
   name: git-gateway
   branch: main
 
-media_folder: "assets"
+media_folder: "assets" # سيتم حفظ الصور التي ترفعها في مجلد assets
 public_folder: "/assets"
 
 # This defines the structure of the CMS editor
@@ -20,9 +20,10 @@ collections:
           - { label: "العنوان الرئيسي", name: "heroTitle", widget: "string" }
           - { label: "العنوان الفرعي", name: "heroSubtitle", widget: "string" }
           - { label: "النبذة التعريفية", name: "aboutText", widget: "text" }
-          - label: "روابط التواصل"
+          - label: "روابط التواصل (اختياري)"
             name: "social_links"
             widget: "list"
+            required: false
             fields:
               - label: "النوع"
                 name: "type"
@@ -89,9 +90,10 @@ collections:
           - { label: "Main Title", name: "heroTitle", widget: "string" }
           - { label: "Subtitle", name: "heroSubtitle", widget: "string" }
           - { label: "About Text", name: "aboutText", widget: "text" }
-          - label: "Social Links"
+          - label: "Social Links (optional)"
             name: "social_links"
             widget: "list"
+            required: false
             fields:
               - label: "Type"
                 name: "type"
