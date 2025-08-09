@@ -1,0 +1,98 @@
+/* Apply a better font to the entire CMS UI */
+body, button, input, textarea, select {
+    font-family: 'Tajawal', sans-serif !important;
+}
+
+/* --- Main Header --- */
+/* Style the top bar */
+[class*="AppHeader-appHeader"] {
+    background-color: #1e293b !important;
+}
+
+/* Style the publish button */
+[class*="EditorToolbar-button-publish"] {
+    background-color: #3b82f6 !important;
+    border-radius: 8px !important;
+}
+[class*="EditorToolbar-button-publish"]:hover {
+    background-color: #2563eb !important;
+}
+
+/* --- Collections Sidebar (Left Panel) --- */
+/* Sidebar background */
+[class*="Collection-collectionTop"] {
+    background-color: #0f172a !important;
+    padding: 1rem !important;
+}
+
+/* Sidebar link styles */
+[class*="Collection-collectionLink"] {
+    color: #94a3b8 !important;
+    font-weight: 500 !important;
+    font-size: 1rem !important;
+    padding: 12px 16px !important;
+    border-radius: 8px !important;
+    border-right: 4px solid transparent !important;
+    border-left: 4px solid transparent !important;
+}
+
+/* Active/selected link style */
+[class*="Collection-collectionLink-active"] {
+    background-color: #1e293b !important;
+    color: #ffffff !important;
+    border-right-color: #3b82f6 !important;
+}
+[dir="ltr"] [class*="Collection-collectionLink-active"] {
+     border-left-color: #3b82f6 !important;
+     border-right-color: transparent !important;
+}
+
+
+/* --- Editor View (Main Panel) --- */
+/* Editor background */
+[class*="Editor-editor"] {
+    background-color: #f1f5f9 !important;
+}
+.dark [class*="Editor-editor"] {
+     background-color: #0f172a !important;
+}
+
+
+/* Style for input fields and text areas */
+[class*="Widget-widget"] input,
+[class*="Widget-widget"] textarea {
+    background-color: #ffffff !important;
+    border: 1px solid #cbd5e1 !important;
+    border-radius: 8px !important;
+    padding: 12px !important;
+    font-size: 1rem !important;
+    color: #1e293b !important;
+}
+.dark [class*="Widget-widget"] input,
+.dark [class*="Widget-widget"] textarea {
+    background-color: #334155 !important;
+    border-color: #475569 !important;
+    color: #e2e8f0 !important;
+}
+
+/* Style for field labels */
+[class*="Control-label"] {
+    color: #475569 !important;
+    font-weight: 700 !important;
+    font-size: 0.9rem !important;
+}
+.dark [class*="Control-label"] {
+    color: #94a3b8 !important;
+}
+
+/* Style for list items (like projects, skills) */
+[class*="ObjectControl-objectControl"] {
+    background-color: #ffffff !important;
+    border-radius: 12px !important;
+    border: 1px solid #e2e8f0 !important;
+    padding: 1.5rem !important;
+}
+.dark [class*="ObjectControl-objectControl"] {
+    background-color: #1e293b !important;
+    border-color: #334155 !important;
+}

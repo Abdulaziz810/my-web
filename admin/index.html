@@ -3,11 +3,47 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Content Manager</title>
+  <title>لوحة التحكم | عبدالعزيز العنزي</title>
   <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+  
+  <!-- Google Fonts for CMS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <style>
+    /* Custom Decap CMS Styles */
+    [data-slate-editor] {
+        font-family: 'Tajawal', sans-serif !important;
+    }
+  </style>
 </head>
 <body>
   <!-- Include the script that builds the page and powers Decap CMS -->
   <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+  
+  <!-- Custom Configuration for CMS Styling -->
+  <script>
+    var PostPreview = createClass({
+      render: function() {
+        var entry = this.props.entry;
+        return h('div', {},
+          h('h1', {}, entry.getIn(['data', 'title'])),
+          h('div', {"className": "text"}, this.props.widgetFor('body'))
+        );
+      }
+    });
+
+    CMS.registerPreviewStyle("/style.css"); // If you have a main site stylesheet
+    CMS.registerPreviewTemplate("posts", PostPreview);
+
+    // This part allows us to inject custom CSS into the CMS UI itself
+    // We're adding a link to a custom CSS file located in the admin folder
+    CMS.registerAdditionalLink({
+        id: 'custom-cms-styles',
+        rel: 'stylesheet',
+        href: '/admin/cms-style.css'
+    });
+  </script>
 </body>
 </html>
