@@ -1,25 +1,13 @@
 {
   "ar": {
-    "navName": "عبدالعزيز",
-    "navHome": "الرئيسية",
-    "experience": "الخبرات",
-    "skills": "المهارات",
-    "navProjects": "المشاريع",
-    "certificatesTitle": "الشهادات والدورات",
-    "download": "تحميل السيرة الذاتية",
-    "heroTitle": "عبدالعزيز العنزي",
-    "heroSubtitle": "خريج علوم حاسب ومطور تطبيقات",
-    "aboutText": "خريج علوم حاسب متحمس، أمتلك خبرة عملية في تطوير تطبيقات الموبايل والدعم الفني. قمت بتطوير تطبيقين متكاملين باستخدام Flutter و Dart، وهما حالياً في المراحل النهائية قبل النشر. أكملت تدريباً لمدة 6 أشهر في الدعم الفني، شمل تشخيص أعطال الأجهزة والبرامج وتقديم المساعدة عن بعد. كما تدربت لفترة وجيزة في مجال أمن المعلومات. أتمتع بمهارات قوية في حل المشكلات وشغف كبير بالتقنية ومساعدة المستخدمين.",
-    "heroContactBtn": "تواصل معي",
-    "education": "التعليم",
-    "edu1": "بكالوريوس علوم الحاسب - جامعة الحدود الشمالية (3.9 / 5 - جيد جداً)",
-    "viewProjectBtn": "عرض المشروع",
-    "viewCertBtn": "عرض الشهادة",
-    "downloadBtn": "تحميل",
-    "footerText": "&copy; 2025 عبدالعزيز العنزي. جميع الحقوق محفوظة.",
     "emailCopied": "تم نسخ البريد الإلكتروني بنجاح!",
-    "phoneCopied": "تم نسخ رقم الجوال بنجاح!",
-    "copyFailed": "فشل النسخ.",
+    "heroImage": "/assets/gemini_generated_image_fidn3jfidn3jfidn.png",
+    "skills": "المهارات",
+    "navHome": "الرئيسية",
+    "download": "تحميل السيرة الذاتية",
+    "viewProjectBtn": "عرض المشروع",
+    "footerText": "&copy; 2025 عبدالعزيز العنزي. جميع الحقوق محفوظة.",
+    "education": "التعليم",
     "experiences": [
       {
         "title": "أخصائي دعم فني (تمهير)",
@@ -69,6 +57,14 @@
         ]
       }
     ],
+    "experience": "الخبرات",
+    "navName": "عبدالعزيز",
+    "copyFailed": "فشل النسخ.",
+    "phoneCopied": "تم نسخ رقم الجوال بنجاح!",
+    "heroSubtitle": "خريج علوم حاسب ومطور تطبيقات",
+    "viewCertBtn": "عرض الشهادة",
+    "downloadBtn": "تحميل",
+    "heroContactBtn": "تواصل معي",
     "projects": [
       {
         "icon": "assets/pr81.webp",
@@ -83,40 +79,33 @@
         "link": "project-trip-cost.html"
       }
     ],
+    "aboutText": "خريج علوم حاسب متحمس، أمتلك خبرة عملية في تطوير تطبيقات الموبايل والدعم الفني. قمت بتطوير تطبيقين متكاملين باستخدام Flutter و Dart، وهما حالياً في المراحل النهائية قبل النشر. أكملت تدريباً لمدة 6 أشهر في الدعم الفني، شمل تشخيص أعطال الأجهزة والبرامج وتقديم المساعدة عن بعد. كما تدربت لفترة وجيزة في مجال أمن المعلومات. أتمتع بمهارات قوية في حل المشكلات وشغف كبير بالتقنية ومساعدة المستخدمين.",
+    "edu1": "بكالوريوس علوم الحاسب - جامعة الحدود الشمالية (3.9 / 5 - جيد جداً)",
     "certificates": [
-        {
-            "logo": "https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg",
-            "title": "أساسيات الدعم الفني (Google)",
-            "link": "https://coursera.org/share/40d296fc581a870b6abe9c5feae8d644"
-        },
-        {
-            "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Old_IBM_Logo.png/640px-Old_IBM_Logo.png",
-            "title": "مقدمة في تحليل البيانات (IBM)",
-            "link": "https://www.coursera.org/account/accomplishments/verify/HEOZP7JHH1R4"
-        }
-    ]
+      {
+        "logo": "https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg",
+        "title": "أساسيات الدعم الفني (Google)",
+        "link": "https://coursera.org/share/40d296fc581a870b6abe9c5feae8d644"
+      },
+      {
+        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Old_IBM_Logo.png/640px-Old_IBM_Logo.png",
+        "title": "مقدمة في تحليل البيانات (IBM)",
+        "link": "https://www.coursera.org/account/accomplishments/verify/HEOZP7JHH1R4"
+      }
+    ],
+    "certificatesTitle": "الشهادات والدورات",
+    "navProjects": "المشاريع",
+    "heroTitle": "عبدالعزيز العنزي"
   },
   "en": {
-    "navName": "Abdulaziz",
-    "navHome": "Home",
-    "experience": "Experience",
-    "skills": "Skills",
-    "navProjects": "Projects",
-    "certificatesTitle": "Certifications",
-    "download": "Download CV",
-    "heroTitle": "Abdulaziz Alanazi",
-    "heroSubtitle": "Computer Science Graduate & App Developer",
-    "aboutText": "Motivated Computer Science graduate with hands-on experience in mobile app development and technical support...",
-    "heroContactBtn": "Contact Me",
-    "education": "Education",
-    "edu1": "Bachelor of Science in Computer Science - Northern Border University (GPA 3.9 / 5 - Very Good)",
-    "viewProjectBtn": "View Project",
-    "viewCertBtn": "View Certificate",
-    "downloadBtn": "Download",
-    "footerText": "&copy; 2025 Abdulaziz Alanazi. All rights reserved.",
     "emailCopied": "Email copied successfully!",
-    "phoneCopied": "Phone number copied successfully!",
-    "copyFailed": "Copy failed.",
+    "heroImage": "/assets/gemini_generated_image_fidn3jfidn3jfidn.png",
+    "skills": "Skills",
+    "navHome": "Home",
+    "download": "Download CV",
+    "viewProjectBtn": "View Project",
+    "footerText": "&copy; 2025 Abdulaziz Alanazi. All rights reserved.",
+    "education": "Education",
     "experiences": [
       {
         "title": "Technical Support Specialist (Tamheer)",
@@ -166,6 +155,14 @@
         ]
       }
     ],
+    "experience": "Experience",
+    "navName": "Abdulaziz",
+    "copyFailed": "Copy failed.",
+    "phoneCopied": "Phone number copied successfully!",
+    "heroSubtitle": "Computer Science Graduate & App Developer",
+    "viewCertBtn": "View Certificate",
+    "downloadBtn": "Download",
+    "heroContactBtn": "Contact Me",
     "projects": [
       {
         "icon": "assets/pr81.webp",
@@ -180,17 +177,22 @@
         "link": "project-trip-cost.html"
       }
     ],
+    "aboutText": "Motivated Computer Science graduate with hands-on experience in mobile app development and technical support...",
+    "edu1": "Bachelor of Science in Computer Science - Northern Border University (GPA 3.9 / 5 - Very Good)",
     "certificates": [
-        {
-            "logo": "https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg",
-            "title": "Technical Support Fundamentals (Google)",
-            "link": "https://coursera.org/share/40d296fc581a870b6abe9c5feae8d644"
-        },
-        {
-            "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Old_IBM_Logo.png/640px-Old_IBM_Logo.png",
-            "title": "Introduction to Data Analytics (IBM)",
-            "link": "https://www.coursera.org/account/accomplishments/verify/HEOZP7JHH1R4"
-        }
-    ]
+      {
+        "logo": "https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg",
+        "title": "Technical Support Fundamentals (Google)",
+        "link": "https://coursera.org/share/40d296fc581a870b6abe9c5feae8d644"
+      },
+      {
+        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Old_IBM_Logo.png/640px-Old_IBM_Logo.png",
+        "title": "Introduction to Data Analytics (IBM)",
+        "link": "https://www.coursera.org/account/accomplishments/verify/HEOZP7JHH1R4"
+      }
+    ],
+    "certificatesTitle": "Certifications",
+    "navProjects": "Projects",
+    "heroTitle": "Abdulaziz Alanazi"
   }
 }
