@@ -1,0 +1,85 @@
+{
+  "pageTitle": "السيرة الذاتية | عبدالعزيز العنزي",
+  "navName": "عبدالعزيز",
+  "heroTitle": "عبدالعزيز العنزي",
+  "heroSubtitle": "خريج علوم حاسب ومطور تطبيقات",
+  "heroImage": "mysl.webp",
+  "aboutText": "خريج علوم حاسب متحمس، أمتلك خبرة عملية في تطوير تطبيقات الموبايل والدعم الفني. قمت بتطوير تطبيقين متكاملين باستخدام Flutter و Dart، وهما حالياً في المراحل النهائية قبل النشر. أكملت تدريباً لمدة 6 أشهر في الدعم الفني، شمل تشخيص أعطال الأجهزة والبرامج وتقديم المساعدة عن بعد. كما تدربت لفترة وجيزة في مجال أمن المعلومات. أتمتع بمهارات قوية في حل المشكلات وشغف كبير بالتقنية ومساعدة المستخدمين.",
+  "footerText": "&copy; 2025 عبدالعزيز العنزي. جميع الحقوق محفوظة.",
+  "social_links": [
+    {
+      "type": "linkedin",
+      "value": "https://linkedin.com/in/abdulaziz-alanazi-northern811"
+    },
+    {
+      "type": "email",
+      "value": "aziiz.alanzy@gmail.com"
+    },
+    {
+      "type": "phone",
+      "value": "0558108107"
+    },
+    {
+      "type": "website",
+      "value": "https://abdulazizmuteb.netlify.app"
+    }
+  ],
+  "sections": [
+    {
+      "id": "experience",
+      "title": "الخبرات",
+      "type": "experience",
+      "items": [
+        {
+          "title": "أخصائي دعم فني (تمهير)",
+          "location": "جامعة الحدود الشمالية، عرعر | ديسمبر 2023 – يونيو 2024",
+          "description": [
+            "دعم أكثر من 100 مستخدم في استكشاف أخطاء البرامج والأجهزة وإصلاحها.",
+            "تقديم الدعم عن بعد عبر الهاتف والأدوات المتخصصة.",
+            "تهيئة الأجهزة، استبدال المكونات، وتثبيت الأنظمة الجديدة.",
+            "توثيق الحلول لتعزيز كفاءة فريق الدعم."
+          ]
+        },
+        {
+          "title": "متدرب في أمن المعلومات",
+          "location": "أمانة منطقة الحدود الشمالية، عرعر | صيف 2022",
+          "description": [
+            "مراقبة إجراءات إدارة صلاحيات وصول المستخدمين وحماية البيانات.",
+            "مراجعة ممارسات أمن الشبكات الأساسية وتطبيق السياسات الداخلية.",
+            "تعلم ممارسات التوثيق وتحديد المخاطر الأساسية."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "skills",
+      "title": "المهارات",
+      "type": "skills",
+      "items": [
+        { "name": "Flutter", "icon_url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/flutter/flutter-original.svg" },
+        { "name": "Dart", "icon_url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/dart/dart-original.svg" },
+        { "name": "Python", "icon_url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" },
+        { "name": "SQL", "icon_url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/sqldeveloper/sqldeveloper-original.svg" }
+      ]
+    },
+    {
+      "id": "projects",
+      "title": "المشاريع",
+      "type": "projects",
+      "items": [
+        {
+          "icon": "assets/pr81.webp",
+          "title": "تطبيق Muslim Companion",
+          "description": "رفيق المسلم المتكامل، يوفر مواقيت الصلاة، اتجاه القبلة، أذكار، والقرآن الكريم.",
+          "link": "project.html"
+        },
+        {
+          "icon": "assets/logo.webp",
+          "title": "تطبيق مشاويري (Trip Cost)",
+          "description": "أداة لمندوبي التوصيل لتتبع تكاليف وأرباح الرحلات، مع حساب الوقود والصيانة.",
+          "link": "project-trip-cost.html"
+        }
+      ]
+    }
+  ]
+}
