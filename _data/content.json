@@ -67,13 +67,13 @@
     "heroContactBtn": "تواصل معي",
     "projects": [
       {
-        "icon": "assets/pr81.webp",
+        "icon": "/assets/gemini_generated_image_fidn3jfidn3jfidn.png",
         "title": "تطبيق Muslim Companion",
         "description": "رفيق المسلم المتكامل، يوفر مواقيت الصلاة، اتجاه القبلة، أذكار، والقرآن الكريم.",
         "link": "project.html"
       },
       {
-        "icon": "assets/logo.webp",
+        "icon": "/assets/gemini_generated_image_fidn3jfidn3jfidn.png",
         "title": "تطبيق مشاويري (Trip Cost)",
         "description": "أداة لمندوبي التوصيل لتتبع تكاليف وأرباح الرحلات، مع حساب الوقود والصيانة.",
         "link": "project-trip-cost.html"
@@ -165,13 +165,13 @@
     "heroContactBtn": "Contact Me",
     "projects": [
       {
-        "icon": "assets/pr81.webp",
+        "icon": "/assets/gemini_generated_image_fidn3jfidn3jfidn.png",
         "title": "Muslim Companion App",
         "description": "An integrated Muslim companion, providing prayer times, Qibla direction, Azkar, and the Holy Quran.",
         "link": "project.html"
       },
       {
-        "icon": "assets/logo.webp",
+        "icon": "/assets/gemini_generated_image_fidn3jfidn3jfidn.png",
         "title": "Trip Cost App",
         "description": "A tool for delivery drivers to track trip costs and profits, calculating fuel and maintenance.",
         "link": "project-trip-cost.html"
