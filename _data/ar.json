@@ -1,11 +1,5 @@
 {
-  "pageTitle": "السيرة الذاتية | عبدالعزيز العنزي",
-  "navName": "عبدالعزيز",
-  "heroTitle": "عبدالعزيز العنزي",
-  "heroSubtitle": "خريج علوم حاسب ومطور تطبيقات",
   "heroImage": "mysl.webp",
-  "aboutText": "خريج علوم حاسب متحمس، أمتلك خبرة عملية في تطوير تطبيقات الموبايل والدعم الفني. قمت بتطوير تطبيقين متكاملين باستخدام Flutter و Dart، وهما حالياً في المراحل النهائية قبل النشر. أكملت تدريباً لمدة 6 أشهر في الدعم الفني، شمل تشخيص أعطال الأجهزة والبرامج وتقديم المساعدة عن بعد. كما تدربت لفترة وجيزة في مجال أمن المعلومات. أتمتع بمهارات قوية في حل المشكلات وشغف كبير بالتقنية ومساعدة المستخدمين.",
-  "footerText": "&copy; 2025 عبدالعزيز العنزي. جميع الحقوق محفوظة.",
   "social_links": [
     {
       "type": "linkedin",
@@ -13,17 +7,15 @@
     },
     {
       "type": "email",
-      "value": "aziiz.alanzy@gmail.com"
+      "value": "azoz-10-2010@hotmail.com"
     },
     {
       "type": "phone",
-      "value": "0558108107"
-    },
-    {
-      "type": "website",
-      "value": "https://abdulazizmuteb.netlify.app"
+      "value": "0504975138"
     }
   ],
+  "footerText": "&copy; 2025 عبدالعزيز العنزي. جميع الحقوق محفوظة.",
+  "pageTitle": "السيرة الذاتية | عبدالعزيز العنزي",
   "sections": [
     {
       "id": "experience",
@@ -56,10 +48,22 @@
       "title": "المهارات",
       "type": "skills",
       "items": [
-        { "name": "Flutter", "icon_url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/flutter/flutter-original.svg" },
-        { "name": "Dart", "icon_url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/dart/dart-original.svg" },
-        { "name": "Python", "icon_url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" },
-        { "name": "SQL", "icon_url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/sqldeveloper/sqldeveloper-original.svg" }
+        {
+          "name": "Flutter",
+          "icon_url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/flutter/flutter-original.svg"
+        },
+        {
+          "name": "Dart",
+          "icon_url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/dart/dart-original.svg"
+        },
+        {
+          "name": "Python",
+          "icon_url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg"
+        },
+        {
+          "name": "SQL",
+          "icon_url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/sqldeveloper/sqldeveloper-original.svg"
+        }
       ]
     },
     {
@@ -81,5 +85,9 @@
         }
       ]
     }
-  ]
+  ],
+  "navName": "عبدالعزيز",
+  "heroSubtitle": "خريج علوم حاسب ومطور تطبيقات",
+  "aboutText": "خريج علوم حاسب متحمس، أمتلك خبرة عملية في تطوير تطبيقات الموبايل والدعم الفني. قمت بتطوير تطبيقين متكاملين باستخدام Flutter و Dart، وهما حالياً في المراحل النهائية قبل النشر. أكملت تدريباً لمدة 6 أشهر في الدعم الفني، شمل تشخيص أعطال الأجهزة والبرامج وتقديم المساعدة عن بعد. كما تدربت لفترة وجيزة في مجال أمن المعلومات. أتمتع بمهارات قوية في حل المشكلات وشغف كبير بالتقنية ومساعدة المستخدمين.",
+  "heroTitle": "عبدالعزيز العنزي"
 }
