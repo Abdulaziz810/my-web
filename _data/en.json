@@ -1,28 +1,16 @@
 {
-  "pageTitle": "CV | Abdulaziz Alanazi",
-  "navName": "Abdulaziz",
-  "heroTitle": "Abdulaziz Alanazi",
-  "heroSubtitle": "Computer Science Graduate & App Developer",
-  "heroImage": "mysl.webp",
-  "aboutText": "Motivated Computer Science graduate with hands-on experience in mobile app development and technical support. Developed two fully functional mobile applications using Flutter and Dart, currently in the final stages of deployment. Completed a 6-month internship in IT support, including hardware diagnostics, software troubleshooting, and remote assistance. Also trained briefly in the field of information security. Strong problem-solving skills with a passion for technology and helping users.",
-  "footerText": "&copy; 2025 Abdulaziz Alanazi. All rights reserved.",
+  "pageTitle": "CV | Your Name",
+  "navName": "Your Name",
+  "heroImage": "assets/placeholder-image.png",
+  "heroTitle": "Full Name",
+  "heroSubtitle": "Your Job Title Here",
+  "aboutText": "Write a professional summary about yourself, your experience, and your career goals here...",
+  "heroContactBtn": "Contact Me",
+  "cvFilePath": "assets/cv-placeholder.pdf",
   "social_links": [
-    {
-      "type": "linkedin",
-      "value": "https://linkedin.com/in/abdulaziz-alanazi-northern811"
-    },
-    {
-      "type": "email",
-      "value": "aziiz.alanzy@gmail.com"
-    },
-    {
-      "type": "phone",
-      "value": "0558108107"
-    },
-    {
-      "type": "website",
-      "value": "https://abdulazizmuteb.netlify.app"
-    }
+    { "type": "linkedin", "value": "#" },
+    { "type": "github", "value": "#" },
+    { "type": "email", "value": "example@email.com" }
   ],
   "sections": [
     {
@@ -31,23 +19,9 @@
       "type": "experience",
       "items": [
         {
-          "title": "Technical Support Specialist (Tamheer)",
-          "location": "Northern Border University, Arar | Dec 2023 – Jun 2024",
-          "description": [
-            "Supported 100+ users with software/hardware troubleshooting.",
-            "Provided remote support via phone & tools.",
-            "Formatted devices, replaced components, and assigned new systems.",
-            "Documented resolutions to enhance support efficiency."
-          ]
-        },
-        {
-          "title": "Information Security Intern",
-          "location": "Northern Borders Municipality, Arar | Summer 2022",
-          "description": [
-            "Observed procedures for managing user access control and data protection.",
-            "Reviewed basic network security practices and internal policy enforcement.",
-            "Learned documentation practices and basic risk identification procedures."
-          ]
+          "title": "Job Title",
+          "location": "Company Name, City | From Date - To Date",
+          "description": ["First description of tasks and achievements."]
         }
       ]
     },
@@ -56,10 +30,7 @@
       "title": "Skills",
       "type": "skills",
       "items": [
-        { "name": "Flutter", "icon_url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/flutter/flutter-original.svg" },
-        { "name": "Dart", "icon_url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/dart/dart-original.svg" },
-        { "name": "Python", "icon_url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" },
-        { "name": "SQL", "icon_url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/sqldeveloper/sqldeveloper-original.svg" }
+        { "name": "Skill Name 1", "icon_url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/flutter/flutter-original.svg" }
       ]
     },
     {
@@ -68,16 +39,22 @@
       "type": "projects",
       "items": [
         {
-          "icon": "assets/pr81.webp",
-          "title": "Muslim Companion App",
-          "description": "An integrated Muslim companion, providing prayer times, Qibla direction, Azkar, and the Holy Quran.",
-          "link": "project.html"
-        },
+          "icon": "assets/placeholder-project.png",
+          "title": "First Project Name",
+          "description": "A short description of the project and its purpose.",
+          "link": "#"
+        }
+      ]
+    },
+    {
+      "id": "certificates",
+      "title": "Certifications",
+      "type": "certificates",
+      "items": [
         {
-          "icon": "assets/logo.webp",
-          "title": "Trip Cost App",
-          "description": "A tool for delivery drivers to track trip costs and profits, calculating fuel and maintenance.",
-          "link": "project-trip-cost.html"
+          "logo": "https://placehold.co/200x80/ffffff/111827?text=Logo",
+          "title": "Certificate Name Here",
+          "link": "#"
         }
       ]
     }

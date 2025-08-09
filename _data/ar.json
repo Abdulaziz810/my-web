@@ -1,49 +1,27 @@
 {
-  "heroImage": "/assets/gemini_generated_image_fidn3jfidn3jfidn.png",
+  "pageTitle": "السيرة الذاتية | الاسم هنا",
+  "navName": "الاسم هنا",
+  "heroImage": "assets/placeholder-image.png",
+  "heroTitle": "الاسم الكامل",
+  "heroSubtitle": "المسمى الوظيفي هنا",
+  "aboutText": "اكتب هنا نبذة تعريفية عنك، خبراتك، وأهدافك المهنية...",
+  "heroContactBtn": "تواصل معي",
+  "cvFilePath": "assets/cv-placeholder.pdf",
   "social_links": [
-    {
-      "type": "linkedin",
-      "value": "https://linkedin.com/in/abdulaziz-alanazi-northern811"
-    },
-    {
-      "type": "email",
-      "value": "azoz-10-2010@hotmail.com"
-    },
-    {
-      "type": "phone",
-      "value": "0504975138"
-    },
-    {
-      "type": "github",
-      "value": "https://www.youtube.com/"
-    }
+    { "type": "linkedin", "value": "#" },
+    { "type": "github", "value": "#" },
+    { "type": "email", "value": "example@email.com" }
   ],
-  "footerText": "&copy; 2025 عبدالعزيز العنزي. جميع الحقوق محفوظة.",
-  "pageTitle": "السيرة الذاتية | عبدالعزيز العنزي",
   "sections": [
     {
       "id": "experience",
-      "title": "الخبرة",
+      "title": "الخبرات",
       "type": "experience",
       "items": [
         {
-          "title": "أخصائي دعم فني (تمهير)",
-          "location": "جامعة الحدود الشمالية، عرعر | ديسمبر 2023 – يونيو 2024",
-          "description": [
-            "دعم أكثر من 100 مستخدم في استكشاف أخطاء البرامج والأجهزة وإصلاحها.",
-            "تقديم الدعم عن بعد عبر الهاتف والأدوات المتخصصة.",
-            "تهيئة الأجهزة، استبدال المكونات، وتثبيت الأنظمة الجديدة.",
-            "توثيق الحلول لتعزيز كفاءة فريق الدعم."
-          ]
-        },
-        {
-          "title": "متدرب في أمن المعلومات",
-          "location": "أمانة منطقة الحدود الشمالية، عرعر | صيف 2022",
-          "description": [
-            "مراقبة إجراءات إدارة صلاحيات وصول المستخدمين وحماية البيانات.",
-            "مراجعة ممارسات أمن الشبكات الأساسية وتطبيق السياسات الداخلية.",
-            "تعلم ممارسات التوثيق وتحديد المخاطر الأساسية."
-          ]
+          "title": "المسمى الوظيفي",
+          "location": "اسم الشركة، المدينة | من تاريخ - إلى تاريخ",
+          "description": ["الوصف الأول للمهام والإنجازات."]
         }
       ]
     },
@@ -52,37 +30,33 @@
       "title": "المهارات",
       "type": "skills",
       "items": [
+        { "name": "اسم المهارة", "icon_url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/flutter/flutter-original.svg" }
+      ]
+    },
+    {
+      "id": "projects",
+      "title": "المشاريع",
+      "type": "projects",
+      "items": [
         {
-          "name": "Flutter",
-          "icon_url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/flutter/flutter-original.svg"
-        },
-        {
-          "name": "Dart",
-          "icon_url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/dart/dart-original.svg"
-        },
-        {
-          "name": "Python",
-          "icon_url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg"
-        },
-        {
-          "name": "SQL",
-          "icon_url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/sqldeveloper/sqldeveloper-original.svg"
+          "icon": "assets/placeholder-project.png",
+          "title": "اسم المشروع الأول",
+          "description": "وصف قصير للمشروع وأهميته.",
+          "link": "#"
         }
       ]
     },
     {
-      "type": "skills",
-      "id": "skills",
-      "title": "الطيران",
+      "id": "certificates",
+      "title": "الشهادات والدورات",
+      "type": "certificates",
       "items": [
         {
-          "name": "طيران افقي"
+          "logo": "https://placehold.co/200x80/ffffff/111827?text=Logo",
+          "title": "اسم الشهادة هنا",
+          "link": "#"
         }
       ]
     }
-  ],
-  "navName": "عبدالعزيز",
-  "heroSubtitle": "خريج علوم حاسب ومطور تطبيقات",
-  "aboutText": "خريج علوم حاسب متحمس، أمتلك خبرة عملية في تطوير تطبيقات الموبايل والدعم الفني. قمت بتطوير تطبيقين متكاملين باستخدام Flutter و Dart، وهما حالياً في المراحل النهائية قبل النشر. أكملت تدريباً لمدة 6 أشهر في الدعم الفني، شمل تشخيص أعطال الأجهزة والبرامج وتقديم المساعدة عن بعد. كما تدربت لفترة وجيزة في مجال أمن المعلومات. أتمتع بمهارات قوية في حل المشكلات وشغف كبير بالتقنية ومساعدة المستخدمين.",
-  "heroTitle": "عبدالعزيز المتعب"
+  ]
 }

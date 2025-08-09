@@ -2,10 +2,9 @@ backend:
   name: git-gateway
   branch: main
 
-media_folder: "assets" # سيتم حفظ الصور التي ترفعها في مجلد assets
+media_folder: "assets"
 public_folder: "/assets"
 
-# This defines the structure of the CMS editor
 collections:
   - name: "arabic_content"
     label: "المحتوى العربي"
@@ -14,68 +13,57 @@ collections:
         name: "arabic_home"
         label: "بيانات الصفحة (العربية)"
         fields:
-          - { label: "عنوان الصفحة في المتصفح", name: "pageTitle", widget: "string" }
-          - { label: "الاسم في القائمة العلوية", name: "navName", widget: "string" }
           - { label: "الصورة الشخصية", name: "heroImage", widget: "image" }
-          - { label: "العنوان الرئيسي", name: "heroTitle", widget: "string" }
-          - { label: "العنوان الفرعي", name: "heroSubtitle", widget: "string" }
+          - { label: "ملف السيرة الذاتية (PDF)", name: "cvFilePath", widget: "file" }
+          - { label: "الاسم الكامل", name: "heroTitle", widget: "string" }
+          - { label: "المسمى الوظيفي", name: "heroSubtitle", widget: "string" }
           - { label: "النبذة التعريفية", name: "aboutText", widget: "text" }
-          - label: "روابط التواصل (اختياري)"
-            name: "social_links"
-            widget: "list"
-            required: false
-            fields:
-              - label: "النوع"
-                name: "type"
-                widget: "select"
-                options: ["linkedin", "github", "email", "phone", "website"]
-              - { label: "الرابط أو القيمة", name: "value", widget: "string" }
-          - label: "الأقسام"
-            name: "sections"
-            widget: "list"
-            types:
-              - label: "قسم الخبرات"
-                name: "experience"
-                widget: "object"
-                fields:
-                  - { label: "معرف القسم (لا تغيره)", name: "id", widget: "hidden", default: "experience" }
-                  - { label: "نوع القسم (لا تغيره)", name: "type", widget: "hidden", default: "experience" }
-                  - { label: "عنوان القسم", name: "title", widget: "string" }
-                  - label: "الخبرات"
-                    name: "items"
-                    widget: "list"
-                    fields:
-                      - { label: "المسمى الوظيفي", name: "title", widget: "string" }
-                      - { label: "المكان والتاريخ", name: "location", widget: "string" }
-                      - { label: "الوصف (كل سطر نقطة)", name: "description", widget: "list" }
-              - label: "قسم المهارات"
-                name: "skills"
-                widget: "object"
-                fields:
-                  - { label: "معرف القسم (لا تغيره)", name: "id", widget: "hidden", default: "skills" }
-                  - { label: "نوع القسم (لا تغيره)", name: "type", widget: "hidden", default: "skills" }
-                  - { label: "عنوان القسم", name: "title", widget: "string" }
-                  - label: "المهارات"
-                    name: "items"
-                    widget: "list"
-                    fields:
-                      - { label: "اسم المهارة", name: "name", widget: "string" }
-                      - { label: "رابط أيقونة المهارة (اختياري)", name: "icon_url", widget: "string", required: false }
-              - label: "قسم المشاريع"
-                name: "projects"
-                widget: "object"
-                fields:
-                  - { label: "معرف القسم (لا تغيره)", name: "id", widget: "hidden", default: "projects" }
-                  - { label: "نوع القسم (لا تغيره)", name: "type", widget: "hidden", default: "projects" }
-                  - { label: "عنوان القسم", name: "title", widget: "string" }
-                  - label: "المشاريع"
-                    name: "items"
-                    widget: "list"
-                    fields:
-                      - { label: "أيقونة المشروع", name: "icon", widget: "image" }
-                      - { label: "عنوان المشروع", name: "title", widget: "string" }
-                      - { label: "وصف المشروع", name: "description", widget: "string" }
-                      - { label: "رابط صفحة المشروع", name: "link", widget: "string" }
+          - { label: "روابط التواصل", name: "social_links", widget: "list", fields: [
+              { label: "النوع", name: "type", widget: "select", options: ["linkedin", "github", "email", "phone", "website"]},
+              { label: "الرابط أو القيمة", name: "value", widget: "string" }
+            ]}
+          - { label: "الأقسام", name: "sections", widget: "list", types: [
+              { label: "قسم الخبرات", name: "experience", fields: [
+                  { name: "id", widget: "hidden", default: "experience" },
+                  { name: "type", widget: "hidden", default: "experience" },
+                  { label: "عنوان القسم", name: "title", widget: "string" },
+                  { label: "الخبرات", name: "items", widget: "list", fields: [
+                      { label: "المسمى الوظيفي", name: "title", widget: "string" },
+                      { label: "المكان والتاريخ", name: "location", widget: "string" },
+                      { label: "الوصف (كل سطر نقطة)", name: "description", widget: "list" }
+                  ]}
+              ]},
+              { label: "قسم المهارات", name: "skills", fields: [
+                  { name: "id", widget: "hidden", default: "skills" },
+                  { name: "type", widget: "hidden", default: "skills" },
+                  { label: "عنوان القسم", name: "title", widget: "string" },
+                  { label: "المهارات", name: "items", widget: "list", fields: [
+                      { label: "اسم المهارة", name: "name", widget: "string" },
+                      { label: "رابط أيقونة المهارة (اختياري)", name: "icon_url", widget: "string", required: false }
+                  ]}
+              ]},
+              { label: "قسم المشاريع", name: "projects", fields: [
+                  { name: "id", widget: "hidden", default: "projects" },
+                  { name: "type", widget: "hidden", default: "projects" },
+                  { label: "عنوان القسم", name: "title", widget: "string" },
+                  { label: "المشاريع", name: "items", widget: "list", fields: [
+                      { label: "أيقونة المشروع", name: "icon", widget: "image" },
+                      { label: "عنوان المشروع", name: "title", widget: "string" },
+                      { label: "الوصف", name: "description", widget: "string" },
+                      { label: "الرابط (صفحة داخلية أو رابط خارجي)", name: "link", widget: "string" }
+                  ]}
+              ]},
+              { label: "قسم الشهادات", name: "certificates", fields: [
+                  { name: "id", widget: "hidden", default: "certificates" },
+                  { name: "type", widget: "hidden", default: "certificates" },
+                  { label: "عنوان القسم", name: "title", widget: "string" },
+                  { label: "الشهادات", name: "items", widget: "list", fields: [
+                      { label: "شعار الشركة (رابط صورة)", name: "logo", widget: "string" },
+                      { label: "عنوان الشهادة", name: "title", widget: "string" },
+                      { label: "رابط عرض الشهادة", name: "link", widget: "string" }
+                  ]}
+              ]}
+            ]}
 
   - name: "english_content"
     label: "English Content"
@@ -84,65 +72,54 @@ collections:
         name: "english_home"
         label: "Page Data (English)"
         fields:
-          - { label: "Page Title in Browser", name: "pageTitle", widget: "string" }
-          - { label: "Name in Navbar", name: "navName", widget: "string" }
           - { label: "Profile Picture", name: "heroImage", widget: "image" }
-          - { label: "Main Title", name: "heroTitle", widget: "string" }
-          - { label: "Subtitle", name: "heroSubtitle", widget: "string" }
+          - { label: "CV File (PDF)", name: "cvFilePath", widget: "file" }
+          - { label: "Full Name", name: "heroTitle", widget: "string" }
+          - { label: "Job Title", name: "heroSubtitle", widget: "string" }
           - { label: "About Text", name: "aboutText", widget: "text" }
-          - label: "Social Links (optional)"
-            name: "social_links"
-            widget: "list"
-            required: false
-            fields:
-              - label: "Type"
-                name: "type"
-                widget: "select"
-                options: ["linkedin", "github", "email", "phone", "website"]
-              - { label: "Link or Value", name: "value", widget: "string" }
-          - label: "Sections"
-            name: "sections"
-            widget: "list"
-            types:
-              - label: "Experience Section"
-                name: "experience"
-                widget: "object"
-                fields:
-                  - { label: "Section ID (do not change)", name: "id", widget: "hidden", default: "experience" }
-                  - { label: "Section Type (do not change)", name: "type", widget: "hidden", default: "experience" }
-                  - { label: "Section Title", name: "title", widget: "string" }
-                  - label: "Experiences"
-                    name: "items"
-                    widget: "list"
-                    fields:
-                      - { label: "Job Title", name: "title", widget: "string" }
-                      - { label: "Location & Date", name: "location", widget: "string" }
-                      - { label: "Description (list items)", name: "description", widget: "list" }
-              - label: "Skills Section"
-                name: "skills"
-                widget: "object"
-                fields:
-                  - { label: "Section ID (do not change)", name: "id", widget: "hidden", default: "skills" }
-                  - { label: "Section Type (do not change)", name: "type", widget: "hidden", default: "skills" }
-                  - { label: "Section Title", name: "title", widget: "string" }
-                  - label: "Skills"
-                    name: "items"
-                    widget: "list"
-                    fields:
-                      - { label: "Skill Name", name: "name", widget: "string" }
-                      - { label: "Skill Icon URL (optional)", name: "icon_url", widget: "string", required: false }
-              - label: "Projects Section"
-                name: "projects"
-                widget: "object"
-                fields:
-                  - { label: "Section ID (do not change)", name: "id", widget: "hidden", default: "projects" }
-                  - { label: "Section Type (do not change)", name: "type", widget: "hidden", default: "projects" }
-                  - { label: "Section Title", name: "title", widget: "string" }
-                  - label: "Projects"
-                    name: "items"
-                    widget: "list"
-                    fields:
-                      - { label: "Project Icon", name: "icon", widget: "image" }
-                      - { label: "Project Title", name: "title", widget: "string" }
-                      - { label: "Project Description", name: "description", widget: "string" }
-                      - { label: "Project Page Link", name: "link", widget: "string" }
+          - { label: "Social Links", name: "social_links", widget: "list", fields: [
+              { label: "Type", name: "type", widget: "select", options: ["linkedin", "github", "email", "phone", "website"]},
+              { label: "Link or Value", name: "value", widget: "string" }
+            ]}
+          - { label: "Sections", name: "sections", widget: "list", types: [
+              { label: "Experience Section", name: "experience", fields: [
+                  { name: "id", widget: "hidden", default: "experience" },
+                  { name: "type", widget: "hidden", default: "experience" },
+                  { label: "Section Title", name: "title", widget: "string" },
+                  { label: "Experiences", name: "items", widget: "list", fields: [
+                      { label: "Job Title", name: "title", widget: "string" },
+                      { label: "Location & Date", name: "location", widget: "string" },
+                      { label: "Description (list items)", name: "description", widget: "list" }
+                  ]}
+              ]},
+              { label: "Skills Section", name: "skills", fields: [
+                  { name: "id", widget: "hidden", default: "skills" },
+                  { name: "type", widget: "hidden", default: "skills" },
+                  { label: "Section Title", name: "title", widget: "string" },
+                  { label: "Skills", name: "items", widget: "list", fields: [
+                      { label: "Skill Name", name: "name", widget: "string" },
+                      { label: "Skill Icon URL (optional)", name: "icon_url", widget: "string", required: false }
+                  ]}
+              ]},
+              { label: "Projects Section", name: "projects", fields: [
+                  { name: "id", widget: "hidden", default: "projects" },
+                  { name: "type", widget: "hidden", default: "projects" },
+                  { label: "Section Title", name: "title", widget: "string" },
+                  { label: "Projects", name: "items", widget: "list", fields: [
+                      { label: "Project Icon", name: "icon", widget: "image" },
+                      { label: "Project Title", name: "title", widget: "string" },
+                      { label: "Description", name: "description", widget: "string" },
+                      { label: "Link (internal or external)", name: "link", widget: "string" }
+                  ]}
+              ]},
+               { label: "Certificates Section", name: "certificates", fields: [
+                  { name: "id", widget: "hidden", default: "certificates" },
+                  { name: "type", widget: "hidden", default: "certificates" },
+                  { label: "Section Title", name: "title", widget: "string" },
+                  { label: "Certificates", name: "items", widget: "list", fields: [
+                      { label: "Company Logo (Image URL)", name: "logo", widget: "string" },
+                      { label: "Certificate Title", name: "title", widget: "string" },
+                      { label: "Certificate Link", name: "link", widget: "string" }
+                  ]}
+              ]}
+            ]}

@@ -13,6 +13,7 @@ body, button, input, textarea, select {
 [class*="EditorToolbar-button-publish"] {
     background-color: #3b82f6 !important;
     border-radius: 8px !important;
+    font-weight: 700 !important;
 }
 [class*="EditorToolbar-button-publish"]:hover {
     background-color: #2563eb !important;
@@ -68,21 +69,12 @@ body, button, input, textarea, select {
     font-size: 1rem !important;
     color: #1e293b !important;
 }
-.dark [class*="Widget-widget"] input,
-.dark [class*="Widget-widget"] textarea {
-    background-color: #334155 !important;
-    border-color: #475569 !important;
-    color: #e2e8f0 !important;
-}
 
 /* Style for field labels */
 [class*="Control-label"] {
     color: #475569 !important;
     font-weight: 700 !important;
     font-size: 0.9rem !important;
-}
-.dark [class*="Control-label"] {
-    color: #94a3b8 !important;
 }
 
 /* Style for list items (like projects, skills) */
@@ -91,8 +83,4 @@ body, button, input, textarea, select {
     border-radius: 12px !important;
     border: 1px solid #e2e8f0 !important;
     padding: 1.5rem !important;
-}
-.dark [class*="ObjectControl-objectControl"] {
-    background-color: #1e293b !important;
-    border-color: #334155 !important;
 }
