@@ -26,8 +26,8 @@
       "type": "experience",
       "items": [
         {
-          "title": "المسمى الوظيفي",
-          "location": "اسم الشركة، المدينة | من تاريخ - إلى تاريخ",
+          "title": "مهندس مدني",
+          "location": "ارامكو 2002 -2025",
           "description": [
             "الوصف الأول للمهام والإنجازات."
           ]
@@ -52,8 +52,8 @@
       "items": [
         {
           "icon": "assets/placeholder-project.png",
-          "title": "اسم المشروع الأول",
-          "description": "وصف قصير للمشروع وأهميته.",
+          "title": "برج خليفة",
+          "description": "برج خليفة من اهم المعالم السياحيه",
           "link": "#"
         }
       ]
@@ -65,16 +65,16 @@
       "items": [
         {
           "logo": "https://placehold.co/200x80/ffffff/111827?text=Logo",
-          "title": "اسم الشهادة هنا",
-          "link": "#"
+          "title": "PMP",
+          "link": "https://www.youtube.com/"
         }
       ]
     }
   ],
   "navName": "الاسم هنا",
-  "heroSubtitle": "المسمى الوظيفي هنا",
-  "cvFilePath": "assets/cv-placeholder.pdf",
+  "heroSubtitle": "مهندس مدني",
+  "cvFilePath": "/assets/abdulaziz_alenezi_cv-1-.pdf",
   "heroContactBtn": "تواصل معي",
-  "aboutText": "اكتب هنا نبذة تعريفية عنك، خبراتك، وأهدافك المهنية...",
-  "heroTitle": "الاسم الكامل"
+  "aboutText": "مهندس بخبرة 20 سنه في مجال الهندسه المعماريه",
+  "heroTitle": "عبدالعزيز"
 }
