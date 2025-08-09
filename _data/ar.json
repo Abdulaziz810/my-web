@@ -1,17 +1,20 @@
 {
-  "pageTitle": "السيرة الذاتية | الاسم هنا",
-  "navName": "الاسم هنا",
-  "heroImage": "assets/placeholder-image.png",
-  "heroTitle": "الاسم الكامل",
-  "heroSubtitle": "المسمى الوظيفي هنا",
-  "aboutText": "اكتب هنا نبذة تعريفية عنك، خبراتك، وأهدافك المهنية...",
-  "heroContactBtn": "تواصل معي",
-  "cvFilePath": "assets/cv-placeholder.pdf",
+  "heroImage": "/assets/gemini_generated_image_fidn3jfidn3jfidn.png",
   "social_links": [
-    { "type": "linkedin", "value": "#" },
-    { "type": "github", "value": "#" },
-    { "type": "email", "value": "example@email.com" }
+    {
+      "type": "linkedin",
+      "value": "https://www.youtube.com/"
+    },
+    {
+      "type": "github",
+      "value": "https://github.com/Abdulaziz810"
+    },
+    {
+      "type": "email",
+      "value": "aziz.alanzy@gomail.sa"
+    }
   ],
+  "pageTitle": "السيرة الذاتية | الاسم هنا",
   "sections": [
     {
       "id": "experience",
@@ -21,7 +24,9 @@
         {
           "title": "المسمى الوظيفي",
           "location": "اسم الشركة، المدينة | من تاريخ - إلى تاريخ",
-          "description": ["الوصف الأول للمهام والإنجازات."]
+          "description": [
+            "الوصف الأول للمهام والإنجازات."
+          ]
         }
       ]
     },
@@ -30,7 +35,10 @@
       "title": "المهارات",
       "type": "skills",
       "items": [
-        { "name": "اسم المهارة", "icon_url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/flutter/flutter-original.svg" }
+        {
+          "name": "اسم المهارة",
+          "icon_url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/flutter/flutter-original.svg"
+        }
       ]
     },
     {
@@ -58,5 +66,11 @@
         }
       ]
     }
-  ]
+  ],
+  "navName": "الاسم هنا",
+  "heroSubtitle": "المسمى الوظيفي هنا",
+  "cvFilePath": "assets/cv-placeholder.pdf",
+  "heroContactBtn": "تواصل معي",
+  "aboutText": "اكتب هنا نبذة تعريفية عنك، خبراتك، وأهدافك المهنية...",
+  "heroTitle": "الاسم الكامل"
 }
