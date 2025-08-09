@@ -1,0 +1,93 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "assets"
+public_folder: "/assets"
+
+collections:
+  - name: "site_content"
+    label: "محتوى الموقع"
+    files:
+      - file: "_data/content.json"
+        name: "content"
+        label: "بيانات الموقع الرئيسية"
+        fields:
+          - label: "النصوص العربية"
+            name: "ar"
+            widget: "object"
+            fields:
+              - { label: "النبذة التعريفية", name: "aboutText", widget: "text" }
+              - label: "الخبرات"
+                name: "experiences"
+                widget: "list"
+                fields:
+                  - { label: "المسمى الوظيفي", name: "title", widget: "string" }
+                  - { label: "المكان والتاريخ", name: "location", widget: "string" }
+                  - { label: "الوصف (كل سطر نقطة)", name: "description", widget: "list" }
+              - label: "فئات المهارات"
+                name: "skill_categories"
+                widget: "list"
+                fields:
+                  - { label: "عنوان الفئة", name: "category_title", widget: "string" }
+                  - { label: "أيقونة الفئة (Font Awesome)", name: "icon", widget: "string" }
+                  - label: "المهارات"
+                    name: "skills"
+                    widget: "list"
+                    fields:
+                      - { label: "اسم المهارة", name: "name", widget: "string" }
+                      - { label: "رابط أيقونة المهارة (اختياري)", name: "icon_url", widget: "string", required: false }
+              - label: "المشاريع"
+                name: "projects"
+                widget: "list"
+                fields:
+                  - { label: "أيقونة المشروع", name: "icon", widget: "image" }
+                  - { label: "عنوان المشروع", name: "title", widget: "string" }
+                  - { label: "وصف المشروع", name: "description", widget: "string" }
+                  - { label: "رابط صفحة المشروع", name: "link", widget: "string" }
+              - label: "الشهادات"
+                name: "certificates"
+                widget: "list"
+                fields:
+                  - { label: "شعار الشركة (رابط)", name: "logo", widget: "string" }
+                  - { label: "عنوان الشهادة", name: "title", widget: "string" }
+                  - { label: "رابط الشهادة", name: "link", widget: "string" }
+          - label: "النصوص الإنجليزية (English Texts)"
+            name: "en"
+            widget: "object"
+            fields:
+              - { label: "About Text", name: "aboutText", widget: "text" }
+              - label: "Experiences"
+                name: "experiences"
+                widget: "list"
+                fields:
+                  - { label: "Job Title", name: "title", widget: "string" }
+                  - { label: "Location & Date", name: "location", widget: "string" }
+                  - { label: "Description (list items)", name: "description", widget: "list" }
+              - label: "Skill Categories"
+                name: "skill_categories"
+                widget: "list"
+                fields:
+                  - { label: "Category Title", name: "category_title", widget: "string" }
+                  - { label: "Category Icon (Font Awesome)", name: "icon", widget: "string" }
+                  - label: "Skills"
+                    name: "skills"
+                    widget: "list"
+                    fields:
+                      - { label: "Skill Name", name: "name", widget: "string" }
+                      - { label: "Skill Icon URL (optional)", name: "icon_url", widget: "string", required: false }
+              - label: "Projects"
+                name: "projects"
+                widget: "list"
+                fields:
+                  - { label: "Project Icon", name: "icon", widget: "image" }
+                  - { label: "Project Title", name: "title", widget: "string" }
+                  - { label: "Project Description", name: "description", widget: "string" }
+                  - { label: "Project Page Link", name: "link", widget: "string" }
+              - label: "Certificates"
+                name: "certificates"
+                widget: "list"
+                fields:
+                  - { label: "Company Logo (URL)", name: "logo", widget: "string" }
+                  - { label: "Certificate Title", name: "title", widget: "string" }
+                  - { label: "Certificate Link", name: "link", widget: "string" }
