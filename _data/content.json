@@ -1,15 +1,16 @@
 {
   "ar": {
+    "heroImage": "mysl.webp",
     "navName": "عبدالعزيز",
     "navHome": "الرئيسية",
     "experience": "الخبرات",
     "skills": "المهارات",
     "navProjects": "المشاريع",
-    "certificatesTitle": "الشهادات والدورات",
+    "certificatesTitle": "الشهادات",
     "download": "تحميل السيرة الذاتية",
     "heroTitle": "عبدالعزيز العنزي",
     "heroSubtitle": "خريج علوم حاسب ومطور تطبيقات",
-    "aboutText": "خريج علوم حاسب متحمس، أمتلك خبرة عملية في تطوير تطبيقات الموبايل والدعم الفني. قمت بتطوير تطبيقين متكاملين باستخدام Flutter و Dart، وهما حالياً في المراحل النهائية قبل النشر. أكملت تدريباً لمدة 6 أشهر في الدعم الفني، شمل تشخيص أعطال الأجهزة والبرامج وتقديم المساعدة عن بعد. كما تدربت لفترة وجيزة في مجال أمن المعلومات. أتمتع بمهارات قوية في حل المشكلات وشغف كبير بالتقنية ومساعدة المستخدمين.",
+    "aboutText": "خريج علوم حاسب متحمس، أمتلك خبرة عملية في تطوير تطبيقات الموبايل والدعم الفني...",
     "heroContactBtn": "تواصل معي",
     "education": "التعليم",
     "edu1": "بكالوريوس علوم الحاسب - جامعة الحدود الشمالية (3.9 / 5 - جيد جداً)",
@@ -20,83 +21,13 @@
     "emailCopied": "تم نسخ البريد الإلكتروني بنجاح!",
     "phoneCopied": "تم نسخ رقم الجوال بنجاح!",
     "copyFailed": "فشل النسخ.",
-    "experiences": [
-      {
-        "title": "أخصائي دعم فني (تمهير)",
-        "location": "جامعة الحدود الشمالية، عرعر | ديسمبر 2023 – يونيو 2024",
-        "description": [
-          "دعم أكثر من 100 مستخدم في استكشاف أخطاء البرامج والأجهزة وإصلاحها.",
-          "تقديم الدعم عن بعد عبر الهاتف والأدوات المتخصصة.",
-          "تهيئة الأجهزة، استبدال المكونات، وتثبيت الأنظمة الجديدة.",
-          "توثيق الحلول لتعزيز كفاءة فريق الدعم."
-        ]
-      },
-      {
-        "title": "متدرب في أمن المعلومات",
-        "location": "أمانة منطقة الحدود الشمالية، عرعر | صيف 2022",
-        "description": [
-          "مراقبة إجراءات إدارة صلاحيات وصول المستخدمين وحماية البيانات.",
-          "مراجعة ممارسات أمن الشبكات الأساسية وتطبيق السياسات الداخلية.",
-          "تعلم ممارسات التوثيق وتحديد المخاطر الأساسية."
-        ]
-      }
-    ],
-    "skill_categories": [
-      {
-        "category_title": "اللغات والأطر",
-        "icon": "fas fa-code",
-        "skills": [
-          {
-            "name": "Flutter",
-            "icon_url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/flutter/flutter-original.svg"
-          },
-          {
-            "name": "Dart",
-            "icon_url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/dart/dart-original.svg"
-          }
-        ]
-      },
-      {
-        "category_title": "المهارات العامة",
-        "icon": "fas fa-users",
-        "skills": [
-          {
-            "name": "حل المشكلات"
-          },
-          {
-            "name": "التواصل الفعال"
-          }
-        ]
-      }
-    ],
-    "projects": [
-      {
-        "icon": "assets/pr81.webp",
-        "title": "تطبيق Muslim Companion",
-        "description": "رفيق المسلم المتكامل، يوفر مواقيت الصلاة، اتجاه القبلة، أذكار، والقرآن الكريم.",
-        "link": "project.html"
-      },
-      {
-        "icon": "assets/logo.webp",
-        "title": "تطبيق مشاويري (Trip Cost)",
-        "description": "أداة لمندوبي التوصيل لتتبع تكاليف وأرباح الرحلات، مع حساب الوقود والصيانة.",
-        "link": "project-trip-cost.html"
-      }
-    ],
-    "certificates": [
-        {
-            "logo": "https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg",
-            "title": "أساسيات الدعم الفني (Google)",
-            "link": "https://coursera.org/share/40d296fc581a870b6abe9c5feae8d644"
-        },
-        {
-            "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Old_IBM_Logo.png/640px-Old_IBM_Logo.png",
-            "title": "مقدمة في تحليل البيانات (IBM)",
-            "link": "https://www.coursera.org/account/accomplishments/verify/HEOZP7JHH1R4"
-        }
-    ]
+    "experiences": [],
+    "skill_categories": [],
+    "projects": [],
+    "certificates": []
   },
   "en": {
+    "heroImage": "mysl.webp",
     "navName": "Abdulaziz",
     "navHome": "Home",
     "experience": "Experience",
@@ -106,7 +37,7 @@
     "download": "Download CV",
     "heroTitle": "Abdulaziz Alanazi",
     "heroSubtitle": "Computer Science Graduate & App Developer",
-    "aboutText": "Motivated Computer Science graduate with hands-on experience in mobile app development and technical support...",
+    "aboutText": "Motivated Computer Science graduate with hands-on experience...",
     "heroContactBtn": "Contact Me",
     "education": "Education",
     "edu1": "Bachelor of Science in Computer Science - Northern Border University (GPA 3.9 / 5 - Very Good)",
@@ -117,80 +48,9 @@
     "emailCopied": "Email copied successfully!",
     "phoneCopied": "Phone number copied successfully!",
     "copyFailed": "Copy failed.",
-    "experiences": [
-      {
-        "title": "Technical Support Specialist (Tamheer)",
-        "location": "Northern Border University, Arar | Dec 2023 – Jun 2024",
-        "description": [
-          "Supported 100+ users with software/hardware troubleshooting.",
-          "Provided remote support via phone & tools.",
-          "Formatted devices, replaced components, and assigned new systems.",
-          "Documented resolutions to enhance support efficiency."
-        ]
-      },
-      {
-        "title": "Information Security Intern",
-        "location": "Northern Borders Municipality, Arar | Summer 2022",
-        "description": [
-          "Observed procedures for managing user access control and data protection.",
-          "Reviewed basic network security practices and internal policy enforcement.",
-          "Learned documentation practices and basic risk identification procedures."
-        ]
-      }
-    ],
-    "skill_categories": [
-      {
-        "category_title": "Languages & Frameworks",
-        "icon": "fas fa-code",
-        "skills": [
-          {
-            "name": "Flutter",
-            "icon_url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/flutter/flutter-original.svg"
-          },
-          {
-            "name": "Dart",
-            "icon_url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/dart/dart-original.svg"
-          }
-        ]
-      },
-      {
-        "category_title": "Soft Skills",
-        "icon": "fas fa-users",
-        "skills": [
-          {
-            "name": "Problem-Solving"
-          },
-          {
-            "name": "Effective Communication"
-          }
-        ]
-      }
-    ],
-    "projects": [
-      {
-        "icon": "assets/pr81.webp",
-        "title": "Muslim Companion App",
-        "description": "An integrated Muslim companion, providing prayer times, Qibla direction, Azkar, and the Holy Quran.",
-        "link": "project.html"
-      },
-      {
-        "icon": "assets/logo.webp",
-        "title": "Trip Cost App",
-        "description": "A tool for delivery drivers to track trip costs and profits, calculating fuel and maintenance.",
-        "link": "project-trip-cost.html"
-      }
-    ],
-    "certificates": [
-        {
-            "logo": "https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg",
-            "title": "Technical Support Fundamentals (Google)",
-            "link": "https://coursera.org/share/40d296fc581a870b6abe9c5feae8d644"
-        },
-        {
-            "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Old_IBM_Logo.png/640px-Old_IBM_Logo.png",
-            "title": "Introduction to Data Analytics (IBM)",
-            "link": "https://www.coursera.org/account/accomplishments/verify/HEOZP7JHH1R4"
-        }
-    ]
+    "experiences": [],
+    "skill_categories": [],
+    "projects": [],
+    "certificates": []
   }
 }

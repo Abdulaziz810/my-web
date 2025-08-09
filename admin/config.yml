@@ -17,6 +17,7 @@ collections:
             name: "ar"
             widget: "object"
             fields:
+              - { label: "الصورة الشخصية", name: "heroImage", widget: "image" }
               - { label: "النبذة التعريفية", name: "aboutText", widget: "text" }
               - label: "الخبرات"
                 name: "experiences"
@@ -56,6 +57,7 @@ collections:
             name: "en"
             widget: "object"
             fields:
+              - { label: "Profile Picture", name: "heroImage", widget: "image" }
               - { label: "About Text", name: "aboutText", widget: "text" }
               - label: "Experiences"
                 name: "experiences"
